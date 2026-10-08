@@ -1,0 +1,134 @@
+.background {
+    position: fixed;
+    inset: 0;
+
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-repeat: repeat-y;
+
+    filter: blur(8px);
+
+    z-index: -1;
+
+    animation: cachoeira 20s linear infinite;
+}
+
+@keyframes cachoeira {
+    from {
+        background-position: center 0;
+    }
+
+    to {
+        background-position: center 100%;
+    }
+}
+
+.titulo {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 64px;
+    font-weight: 600;
+
+    line-height: 1;
+    position: relative;
+    top: 120px;
+
+    color: white;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+.titulo #separador {
+    color: #ff6b81;
+}
+
+.menu {
+    width: 500px;
+
+    padding: 0;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu table {
+    width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Cabeçalho */
+.menu th {
+    background: #f8d7df;
+    color: #5a2632;
+
+    padding: 14px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+
+    border-bottom: 2px solid #e8b8c3;
+}
+
+/* Células */
+.menu td {
+    padding: 13px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #eee;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+/* Primeira coluna */
+.menu td:first-child {
+    font-weight: bold;
+    color: #5a2632;
+}
+
+/* Segunda coluna */
+.menu td:last-child {
+    color: #333;
+}
+
+/* Linhas */
+.menu tr:nth-child(even) td {
+    background: #fff7f9;
+}
+
+.menu tr:nth-child(odd) td {
+    background: white;
+}
+
+/* Efeito ao passar o mouse */
+.menu tr:hover td {
+    background: #ffe9ee;
+}
+
+/* Remove a borda da última linha */
+.menu tr:last-child td {
+    border-bottom: none;
+}
